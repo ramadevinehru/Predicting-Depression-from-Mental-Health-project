@@ -87,13 +87,21 @@ Target Variable: Depression (Binary: 1 = Depressed, 0 = Not Depressed)
 ##Project Structure:
 
 ├── streamlit_app.py                # Main Streamlit app
+
 ├── model.pth                       # Trained PyTorch model
+
 ├── categorical_cols.pkl            # Categorical columns used during training
+
 ├── numerical_cols.pkl              # Numerical columns used during training
+
 ├── label_encoders.pkl              # Encoders for categorical values
+
 ├── scaler.pkl                      # Scaler object for numerical normalization
+
 ├── medians.pkl                     # Median values used for imputing missing data
+
 ├── requirements.txt                # List of dependencies
+
 └── README.md                       # This file
 
 ##License:
