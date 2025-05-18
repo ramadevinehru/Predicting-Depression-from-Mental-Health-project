@@ -1,4 +1,5 @@
 Depression Prediction Using Mental Health Survey Data
+
 Overview:
 This project is a Depression Prediction Web Application built using Python, Streamlit, and PyTorch. It analyzes mental health survey data to predict whether an individual is likely to experience depression based on various lifestyle, psychological, and demographic factors. The application enables real-time prediction by collecting inputs from users through an intuitive interface, making it suitable for both students and working professionals.
 
