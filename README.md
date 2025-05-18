@@ -2,14 +2,14 @@ Depression Prediction Using Mental Health Survey Data
 Overview:
 This project is a Depression Prediction Web Application built using Python, Streamlit, and PyTorch. It analyzes mental health survey data to predict whether an individual is likely to experience depression based on various lifestyle, psychological, and demographic factors. The application enables real-time prediction by collecting inputs from users through an intuitive interface, making it suitable for both students and working professionals.
 
-Features:
+##Features:
 Real-time Predictions:
 Depression Classification: Classifies whether a user is likely to be depressed or not using a pre-trained neural network.
 
-Data Input:
+##Data Input:
 Users can enter personal, lifestyle, and emotional attributes directly into the web interface.
 
-Preprocessing Pipeline:
+##Preprocessing Pipeline:
 
 Missing Value Handling:
 Categorical values filled with 'Unknown'
@@ -24,7 +24,7 @@ Standardization of numerical features using StandardScaler
 Consistent Feature Alignment:
 Ensures that training and inference features match exactly
 
-Model:
+##Model:
 Architecture:
 Model: Multi-Layer Perceptron (MLP)
 
@@ -38,11 +38,11 @@ Second Layer: 32 neurons + ReLU
 
 Output Layer: 1 neuron + Sigmoid (for binary classification)
 
-Model File:
+##Model File:
 Trained model weights are saved as model.pth
 Automatically loaded in the Streamlit application
 
-Technologies Used:
+##Technologies Used:
 Python
 Streamlit
 PyTorch
@@ -50,7 +50,7 @@ pandas
 scikit-learn
 joblib (for serialization of encoders, scalers, etc.)
 
-Prerequisites:
+##Prerequisites:
 Before running the app, ensure the following are installed:
 Python >= 3.10
 
@@ -71,19 +71,19 @@ Usage:
 Run the application locally:
 bash:"streamlit run streamlit_app.py"
 
-How to Use:
+##How to Use:
 Fill in the appropriate fields shown based on your selection
 Click on "Predict Depression"
 View the result: "Depressed" or "Not Depressed"
 
-🧠 Model Details:
+##Model Details:
 Training Data: Cleaned and preprocessed using LabelEncoder, StandardScaler
 
 Trained on: Mental Health Survey dataset
 
 Target Variable: Depression (Binary: 1 = Depressed, 0 = Not Depressed)
 
-Project Structure:
+##Project Structure:
 
 ├── streamlit_app.py                # Main Streamlit app
 ├── model.pth                       # Trained PyTorch model
@@ -95,10 +95,10 @@ Project Structure:
 ├── requirements.txt                # List of dependencies
 └── README.md                       # This file
 
-License:
+##License:
 This project is licensed under the MIT License.
 
-Author:
+##Author:
 Ramadevi N
 
 
