@@ -1,4 +1,5 @@
 # Depression Prediction from Survey Data
+# Depression Prediction from Survey Data
 
 ## Overview
 
@@ -84,6 +85,8 @@ Feel free to contribute by forking the repository and submitting pull requests.
 ## License
 
 This project is licensed under the MIT License.
+
+## Author
 
 ## Author
 
