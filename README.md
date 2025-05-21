@@ -1,119 +1,90 @@
-Depression Prediction Using Mental Health Survey Data
+# Depression Prediction from Survey Data
 
-Overview:
-This project is a Depression Prediction Web Application built using Python, Streamlit, and PyTorch. It analyzes mental health survey data to predict whether an individual is likely to experience depression based on various lifestyle, psychological, and demographic factors. The application enables real-time prediction by collecting inputs from users through an intuitive interface, making it suitable for both students and working professionals.
+## Overview
 
-##Features:
-Real-time Predictions:
-Depression Classification: Classifies whether a user is likely to be depressed or not using a pre-trained neural network.
+This project is a **Depression Prediction System** built using **Python, PyTorch, Scikit-learn, and Streamlit**. It enables users to input personal, demographic, and lifestyle information through a web interface and predicts whether they are likely experiencing depression using a trained Deep Neural Network (DNN). The goal is to provide accessible mental health insights powered by machine learning.
 
-##Data Input:
-Users can enter personal, lifestyle, and emotional attributes directly into the web interface.
+## Features
 
-##Preprocessing Pipeline:
+* **Streamlit-Based Input Interface**: Collects user data via an interactive form (age, education, lifestyle, etc.).
+* **Real-Time Depression Prediction**: Predicts the likelihood of depression using a trained PyTorch DNN model.
+* **Preprocessing Pipeline**: Includes data imputation, scaling, and encoding based on training-time configuration.
+* **Model Evaluation**: Evaluates model using accuracy, precision, recall, and F1-score.
 
-Missing Value Handling:
-Categorical values filled with 'Unknown'
-Numerical values filled with median values
+## Technologies Used
 
-Label Encoding:
-Categorical variables are encoded using LabelEncoder
+* Python
+* PyTorch
+* Scikit-learn
+* Pandas / NumPy
+* Streamlit
+* Joblib / Pickle
 
-Feature Scaling:
-Standardization of numerical features using StandardScaler
+## Dataset
 
-Consistent Feature Alignment:
-Ensures that training and inference features match exactly
+* **Mental Health Survey Data**: Includes demographic, behavioral, and medical history attributes.
+* Binary Classification Target: Depression (Yes/No)
 
-##Model:
-Architecture:
-Model: Multi-Layer Perceptron (MLP)
+## Prerequisites
 
-Input Layer: Matches number of selected categorical + numerical features
+Ensure you have the following installed:
 
-Hidden Layers:
+* Python (>=3.9)
+* pip
+* Required Python libraries:
 
-First Layer: 64 neurons + ReLU + Dropout (0.3)
+```bash
+pip install torch scikit-learn pandas streamlit joblib
+```
 
-Second Layer: 32 neurons + ReLU
+## Usage
 
-Output Layer: 1 neuron + Sigmoid (for binary classification)
+**Train the model:**
 
-##Model File:
-Trained model weights are saved as model.pth
-Automatically loaded in the Streamlit application
+Run `training.ipynb` to preprocess data, train the DNN, and save the model with the required preprocessing objects.
 
-##Technologies Used:
-Python
-Streamlit
-PyTorch
-pandas
-scikit-learn
-joblib (for serialization of encoders, scalers, etc.)
+**Run the Streamlit app:**
 
-##Prerequisites:
-Before running the app, ensure the following are installed:
-Python >= 3.10
+```bash
+streamlit run app.py
+```
 
-Required libraries: pip install -r requirements.txt
+Enter user information in the form.
 
-Example requirements.txt:
-nginx
-Copy
-Edit
-streamlit
-torch
-pandas
-numpy
-scikit-learn
-joblib
+View the depression prediction result and optionally download it.
 
-Usage:
-Run the application locally:
-bash:"streamlit run streamlit_app.py"
+## DNN Model Architecture
 
-##How to Use:
-Fill in the appropriate fields shown based on your selection
-Click on "Predict Depression"
-View the result: "Depressed" or "Not Depressed"
+* Input: Numerical and one-hot encoded categorical features
+* Hidden Layers: 7 fully connected layers with the following sizes:
+  - 128, 64, 32, 16, 8, 4, 2
+* Activation: LeakyReLU after each layer
+* Output Layer: 2 units (for binary classification: 0 or 1)
+* Loss Function: CrossEntropyLoss
+* Optimizer: Adam with learning rate = 0.001
 
-##Model Details:
-Training Data: Cleaned and preprocessed using LabelEncoder, StandardScaler
+## Directory Structure
 
-Trained on: Mental Health Survey dataset
+```
+├── train.csv / test.csv             # Input data
+├── training.ipynb                   # Script for training and saving the model
+├── app.py                           # Streamlit app for real-time prediction
+├── dnn_depression_model.pth         # Trained PyTorch model
+├── scaler.pkl                       # StandardScaler used in preprocessing
+├── imputers.pkl                     # Imputers for missing value handling
+├── reference_columns.pkl            # Feature column reference from training
+├── test_predictions.csv             # Output predictions from test set
+├── README.md                        # Project documentation
+```
 
-Target Variable: Depression (Binary: 1 = Depressed, 0 = Not Depressed)
+## Contribution
 
-##Project Structure:
+Feel free to contribute by forking the repository and submitting pull requests.
 
-├── streamlit_app.py                # Main Streamlit app
+## License
 
-├── model.pth                       # Trained PyTorch model
-
-├── categorical_cols.pkl            # Categorical columns used during training
-
-├── numerical_cols.pkl              # Numerical columns used during training
-
-├── label_encoders.pkl              # Encoders for categorical values
-
-├── scaler.pkl                      # Scaler object for numerical normalization
-
-├── medians.pkl                     # Median values used for imputing missing data
-
-├── requirements.txt                # List of dependencies
-
-└── README.md                       # This file
-
-##License:
 This project is licensed under the MIT License.
 
-##Author:
+## Author
+
 Ramadevi N
-
-
-
-
-
-
-
-
