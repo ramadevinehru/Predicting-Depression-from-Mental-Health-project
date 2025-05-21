@@ -30,7 +30,7 @@ This project is a **Depression Prediction System** built using **Python, PyTorch
 
 Ensure you have the following installed:
 
-* Python (>=3.9)
+* Python (>=3.1)
 * pip
 * Required Python libraries:
 
