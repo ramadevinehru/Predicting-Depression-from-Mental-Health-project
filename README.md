@@ -30,7 +30,7 @@ This project is a **Depression Prediction System** built using **Python, PyTorch
 
 Ensure you have the following installed:
 
-* Python (>=3.9)
+* Python (>=3.1)
 * pip
 * Required Python libraries:
 
@@ -42,12 +42,12 @@ pip install torch scikit-learn pandas streamlit joblib
 
 **Train the model:**
 
-Run `train_model.py` to preprocess data, train the DNN, and save the model with the required preprocessing objects.
+Run `training.ipynb` to preprocess data, train the DNN, and save the model with the required preprocessing objects.
 
 **Run the Streamlit app:**
 
 ```bash
-streamlit run streamlit_app_3.py
+streamlit run app.py
 ```
 
 Enter user information in the form.
